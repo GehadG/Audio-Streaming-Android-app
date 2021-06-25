@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.player.PlayerActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="60dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/trackImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/ic_launcher_background" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/trackTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/cereal_book"
+        android:gravity="center"
+        android:text="TRACK TITLE"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/card" />
+
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cereal_light"
+        android:gravity="center"
+        android:text="TRACK TITLE"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/trackTitle" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@id/genre"
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        app:trackColorActive="#b49c69"
+        android:enabled="false"
+        app:thumbRadius="2dp"
+        app:thumbColor="#b49c69"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cereal_light"
+        android:gravity="center"
+        android:text="TRACK TITLE"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+
+
+    <ImageView
+        android:id="@+id/playBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
